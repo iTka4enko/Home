@@ -1,0 +1,117 @@
+.main{
+    background: center -100px no-repeat url('../images/main-screen/main-bg.png');
+    background-size: cover;
+
+    &__header{
+        display: flex;
+        justify-content: space-between;
+
+        padding: 40px 0;
+    }
+    &__nav{
+        &>ul>li{
+            cursor: pointer;
+
+            position: relative;
+            transition: all .2s;
+
+            a{
+                color: #454546;
+            }
+            &:hover>a{
+                color: white;
+            }
+            &::after{
+                content: '';
+                width: 100%;
+                height: 5px;
+
+                background-color: #008ea5;
+
+                position: absolute;
+                left: 0;
+                bottom: -40px;
+                
+                transform: scaleX(0);
+                transition: inherit;
+            }
+            &:hover::after{
+                transform: scaleX(1);
+            }
+        }
+    }
+
+    &__info{
+        margin-top: 148px;
+
+        h2{
+            margin-bottom: 25px;
+        }
+        p{
+            margin-top: 15px;
+
+            max-width: 460px;
+        }
+        .main-button{
+            margin-top: 40px;
+            margin-bottom: 140px;
+        }
+    }
+
+    &__logos{
+        background-color: #fafafa;
+        width: 100%;
+
+        ul{
+            display: flex;
+            flex-flow: wrap;
+            justify-content: center;
+
+            li{
+                margin: 30px 10px;
+            }
+        }
+    }
+}
+.logo{
+	img{
+		width: 100%;
+        height: 100%;
+	}
+}
+// MEDIA ---------------
+@media(max-width: 700px){
+    .main{
+		&__info{
+            p{
+                width: 270px;   
+            }
+        }
+	}
+}
+@media(max-width: 560px){
+    .logo{
+		width: 230px;
+        height: 20px;
+	}
+}
+@media(max-width: 460px){
+    .main{
+        background-position: 0 -180px;
+
+        &__info{
+            p{
+                margin-top: 25px;
+                text-align: center;
+            }
+            button{
+                margin-top: 80px;
+            }
+            .container{
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+            }
+        }
+    }
+}

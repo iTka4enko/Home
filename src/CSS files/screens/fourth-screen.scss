@@ -1,0 +1,33 @@
+.fourth{
+    margin-top: 90px;
+
+    display: flex;
+    background-color: #367ab7;
+
+    &__text{
+        padding: 40px 30px 51px 30px;
+
+        h2{
+            margin-top: 40px;
+        }
+        p{
+            margin-top: 30px;
+            max-width: 470px;
+        }
+        .main-button{
+            margin-top: 40px;
+        }
+    }
+    &__italic{
+        font-size: 18px;
+        color: #ffffff;
+        font-weight: 400;
+        font-style: italic;
+    }
+}
+// MEDIA-----------------------
+@media(max-width: 1130px){
+    .fourth{
+        flex-flow: column;
+    }
+}
